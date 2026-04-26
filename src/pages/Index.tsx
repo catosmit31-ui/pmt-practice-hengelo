@@ -3,6 +3,7 @@ import { ArrowRight, Heart, Brain, Users } from "lucide-react";
 import Layout from "@/components/Layout";
 import heroImage from "@/assets/hero-pmt.jpg";
 import behandelingImage from "@/assets/pmt-behandeling.jpg";
+import logoLight from "@/assets/logo-light.jpg";
 
 const HomePage = () => {
   return (
@@ -16,7 +17,7 @@ const HomePage = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-xl">
             <p className="text-primary font-medium text-sm tracking-widest uppercase mb-4 animate-fade-in-up">
-              Psychomotorische Therapie · Hengelo
+              Stap Vooruit pmt · Hengelo
             </p>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               Samen werken aan{" "}
@@ -24,7 +25,7 @@ const HomePage = () => {
               <span className="text-accent">geest</span>
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              PMT-praktijk van Cato Smit, gevestigd bij TeamFysio Hengelo.
+              Stap Vooruit pmt — de psychomotorische therapiepraktijk van Cato Smit, gevestigd bij TeamFysio Hengelo.
               Voor kinderen en volwassenen die baat hebben bij een lichaamsgerichte
               en bewegingsgerichte aanpak.
             </p>
@@ -44,6 +45,13 @@ const HomePage = () => {
             </div>
           </div>
         </div>
+        {/* Subtle logo watermark in corner */}
+        <img
+          src={logoLight}
+          alt=""
+          aria-hidden="true"
+          className="hidden lg:block absolute bottom-6 right-6 h-24 w-auto object-contain opacity-80 rounded-lg shadow-md z-10"
+        />
       </section>
 
       {/* Features */}

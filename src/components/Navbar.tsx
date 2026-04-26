@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logoDark from "@/assets/logo-dark.jpg";
 
 const navItems = [
   { path: "/", label: "Home" },
@@ -15,9 +16,13 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="font-heading text-xl font-semibold text-foreground tracking-tight">
-          Cato Smit <span className="text-primary font-normal text-base ml-1">PMT</span>
+      <div className="container mx-auto px-6 py-3 flex items-center justify-between">
+        <Link to="/" aria-label="Stap Vooruit pmt — home" className="flex items-center">
+          <img
+            src={logoDark}
+            alt="Stap Vooruit pmt logo"
+            className="h-12 md:h-14 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop nav */}
