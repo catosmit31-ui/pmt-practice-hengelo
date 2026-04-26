@@ -10,12 +10,12 @@ const Footer = () => {
           <div>
             <img
               src={logoLight}
-              alt="Stap Vooruit pmt logo"
+              alt="Stap Vooruit PMT logo"
               className="h-20 w-auto object-contain mb-3 -ml-2"
             />
             <p className="text-sm leading-relaxed opacity-80">
-              Psychomotorische therapie voor kinderen en volwassenen in Hengelo.
-              Samen werken aan lichaam én geest.
+              Praktijk voor psychomotorische therapie in Hengelo.
+              Voor kinderen, jongeren en (jong)volwassenen.
             </p>
           </div>
 
@@ -38,11 +38,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Phone size={16} className="shrink-0" />
-                <a href="tel:0882918408" className="hover:opacity-100 transition-opacity">088 291 84 08</a>
+                <a href="tel:+31683304260" className="hover:opacity-100 transition-opacity">+31 6 83 30 42 60</a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={16} className="shrink-0" />
-                <a href="mailto:info@teamfysio.nl" className="hover:opacity-100 transition-opacity">info@teamfysio.nl</a>
+                <a href="mailto:info@stapvooruitpmt.nl" className="hover:opacity-100 transition-opacity">info@stapvooruitpmt.nl</a>
               </div>
             </div>
           </div>
@@ -50,7 +50,7 @@ const Footer = () => {
 
         <div className="mt-10 pt-6 border-t border-white/10 text-center">
           <p className="text-xs opacity-70">
-            © {new Date().getFullYear()} Stap Vooruit pmt — Cato Smit, Psychomotorische Therapie. Praktijk bij{" "}
+            © {new Date().getFullYear()} Stap Vooruit PMT — Cato Smit, Psychomotorische Therapie. Praktijk bij{" "}
             <a href="https://teamfysio.nl/locaties/teamfysio-locatie-hengelo" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-100">
               TeamFysio Hengelo
             </a>

@@ -18,14 +18,20 @@ const OverMij = () => {
                 Cato Smit
               </h1>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                Als psychomotorisch therapeut geloof ik in de kracht van de
-                verbinding tussen lichaam en geest. Met passie en betrokkenheid
-                help ik zowel kinderen als volwassenen om weer in balans te komen.
+                Mijn naam is Cato Smit, psychomotorisch therapeut (PMT). Sinds juni
+                heb ik mijn eigen praktijk, waarin ik kinderen en (jong)volwassenen
+                help die vastlopen in het dagelijks leven. Denk aan stress, moeite met
+                grenzen aangeven, onzekerheid over gevoelens of het ontwikkelen van
+                meer zelfvertrouwen.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Binnen PMT staat ervarend leren centraal. Door te bewegen krijg je meer
+                inzicht in jezelf. Niet alles hoeft in woorden — juist door te doen en
+                te voelen ontstaat ruimte voor verandering.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Na jaren ervaring bij diverse zorginstellingen start ik nu mijn eigen
-                PMT-praktijk bij TeamFysio in Hengelo. Hier kan ik de persoonlijke,
-                lichaamsgerichte zorg bieden waar ik voor sta.
+                Een goede klik is voor mij essentieel. Ik werk nuchter en praktisch,
+                met aandacht voor beweging, serieuze momenten én ruimte voor humor.
               </p>
               <Link
                 to="/contact"
@@ -61,29 +67,12 @@ const OverMij = () => {
                 </div>
                 <div>
                   <h3 className="font-heading text-lg font-semibold text-foreground mb-1">
-                    Opleiding Psychomotorische Therapie
+                    Windesheim, Zwolle
                   </h3>
+                  <p className="text-sm text-muted-foreground mb-1">Afgestudeerd in 2021</p>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    HBO-opleiding Psychomotorische Therapie, geaccrediteerd
-                    en erkend als paramedische behandelvorm. Als PMT'er is Cato
-                    bevoegd om zelfstandig cliënten te behandelen.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="w-12 h-12 rounded-lg bg-sage-light flex items-center justify-center shrink-0">
-                  <Briefcase className="text-primary" size={22} />
-                </div>
-                <div>
-                  <h3 className="font-heading text-lg font-semibold text-foreground mb-1">
-                    Koninklijke Kentalis
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-1">September 2025 – heden · Enschede</p>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    Psychomotorisch therapeut bij Koninklijke Kentalis, een
-                    organisatie gespecialiseerd in zorg voor mensen met
-                    beperkingen in horen, zien en communiceren.
+                    HBO-opleiding Psychomotorische Therapie en Bewegingsagogie —
+                    een geaccrediteerde, paramedische behandelvorm.
                   </p>
                 </div>
               </div>
@@ -96,11 +85,27 @@ const OverMij = () => {
                   <h3 className="font-heading text-lg font-semibold text-foreground mb-1">
                     Aveleijn
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-1">Ervaring in de gehandicaptenzorg</p>
+                  <p className="text-sm text-muted-foreground mb-1">Psychomotorisch therapeut · heden</p>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Werkervaring als psychomotorisch therapeut bij Aveleijn,
-                    een zorgorganisatie die ondersteuning biedt aan mensen met
-                    een verstandelijke beperking.
+                    Naast mijn eigen praktijk werk ik nog steeds met veel plezier
+                    bij Aveleijn, een zorgorganisatie voor mensen met een
+                    verstandelijke beperking. Hier ontwikkel ik mij verder als therapeut.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="w-12 h-12 rounded-lg bg-sage-light flex items-center justify-center shrink-0">
+                  <Briefcase className="text-primary" size={22} />
+                </div>
+                <div>
+                  <h3 className="font-heading text-lg font-semibold text-foreground mb-1">
+                    Ervaring in de jeugdzorg
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Na mijn afstuderen deed ik ervaring op in de jeugdzorg, waar ik
+                    werkte met kinderen en jongeren die vastliepen in hun
+                    ontwikkeling.
                   </p>
                 </div>
               </div>

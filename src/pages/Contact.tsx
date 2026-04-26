@@ -2,11 +2,11 @@ import { MapPin, Phone, Mail, Clock, ExternalLink } from "lucide-react";
 import Layout from "@/components/Layout";
 
 const openingstijden = [
-  { dag: "Maandag", open: "08:00", sluit: "18:00" },
-  { dag: "Dinsdag", open: "08:30", sluit: "20:00" },
-  { dag: "Woensdag", open: "08:30", sluit: "17:30" },
-  { dag: "Donderdag", open: "08:00", sluit: "20:00" },
-  { dag: "Vrijdag", open: "08:00", sluit: "16:30" },
+  { dag: "Maandag", open: "08:00", sluit: "17:00" },
+  { dag: "Dinsdag", open: "08:00", sluit: "17:00" },
+  { dag: "Woensdag", open: "Gesloten", sluit: "" },
+  { dag: "Donderdag", open: "Gesloten", sluit: "" },
+  { dag: "Vrijdag", open: "Gesloten", sluit: "" },
   { dag: "Zaterdag", open: "Gesloten", sluit: "" },
   { dag: "Zondag", open: "Gesloten", sluit: "" },
 ];
@@ -67,8 +67,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-medium text-foreground text-sm">Telefoon</p>
-                      <a href="tel:0882918408" className="text-muted-foreground text-sm hover:text-primary transition-colors">
-                        088 291 84 08
+                      <a href="tel:+31683304260" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                        +31 6 83 30 42 60
                       </a>
                     </div>
                   </div>
@@ -79,8 +79,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-medium text-foreground text-sm">E-mail</p>
-                      <a href="mailto:info@teamfysio.nl" className="text-muted-foreground text-sm hover:text-primary transition-colors">
-                        info@teamfysio.nl
+                      <a href="mailto:info@stapvooruitpmt.nl" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                        info@stapvooruitpmt.nl
                       </a>
                     </div>
                   </div>
@@ -98,7 +98,8 @@ const Contact = () => {
                   </h3>
                 </div>
                 <p className="text-muted-foreground text-sm mb-4">
-                  Telefonisch bereikbaar op werkdagen van 08:00 tot 17:00 uur.
+                  Behandelingen vinden plaats op maandag en dinsdag.
+                  In overleg zijn afspraken tot 19:00 uur mogelijk.
                 </p>
                 <div className="space-y-2">
                   {openingstijden.map((item) => (

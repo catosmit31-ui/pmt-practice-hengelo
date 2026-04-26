@@ -17,10 +17,10 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-3 flex items-center justify-between">
-        <Link to="/" aria-label="Stap Vooruit pmt — home" className="flex items-center">
+        <Link to="/" aria-label="Stap Vooruit PMT — home" className="flex items-center">
           <img
             src={logoDark}
-            alt="Stap Vooruit pmt logo"
+            alt="Stap Vooruit PMT logo"
             className="h-12 md:h-14 w-auto object-contain"
           />
         </Link>

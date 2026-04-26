@@ -13,17 +13,17 @@ const HomePage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <p className="text-primary font-medium text-sm tracking-widest uppercase mb-4 animate-fade-in-up">
-                Stap Vooruit pmt · Hengelo
+                Stap Vooruit PMT · Hengelo
               </p>
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-                Samen werken aan{" "}
-                <span className="text-primary">lichaam</span> én{" "}
-                <span className="text-accent">geest</span>
+                Een{" "}
+                <span className="text-primary">stap vooruit</span> via{" "}
+                <span className="text-accent">beweging</span>
               </h1>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-                Stap Vooruit pmt — de psychomotorische therapiepraktijk van Cato Smit, gevestigd bij TeamFysio Hengelo.
-                Voor kinderen en volwassenen die baat hebben bij een lichaamsgerichte
-                en bewegingsgerichte aanpak.
+                Stap Vooruit PMT is de praktijk voor psychomotorische therapie van Cato Smit
+                in Hengelo. Door beweging en ervaringsgerichte oefeningen leer je lichaamssignalen,
+                emoties en gedragspatronen beter herkennen — voor kinderen, jongeren en (jong)volwassenen.
               </p>
               <div className="flex flex-wrap gap-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
                 <Link
@@ -43,7 +43,7 @@ const HomePage = () => {
             <div className="order-1 lg:order-2 flex justify-center animate-fade-in-up">
               <img
                 src={logoLight}
-                alt="Stap Vooruit pmt logo"
+                alt="Stap Vooruit PMT logo"
                 className="w-full max-w-md lg:max-w-xl h-auto object-contain rounded-2xl shadow-xl"
               />
             </div>
