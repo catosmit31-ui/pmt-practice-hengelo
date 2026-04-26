@@ -24,7 +24,7 @@
     --muted: 40 20% 92%;
     --muted-foreground: 150 10% 45%;
 
-    --accent: 152 28% 38%;
+    --accent: 190 14% 52%;
     --accent-foreground: 60 20% 94%;
 
     --destructive: 0 84.2% 60.2%;
@@ -45,14 +45,15 @@
     --sidebar-border: 40 20% 88%;
     --sidebar-ring: 170 22% 24%;
 
-    /* Custom tokens */
-    --sage: 152 28% 38%;
-    --sage-light: 170 18% 92%;
+    /* Custom tokens — afgeleid van het Stap Vooruit PMT logo */
+    --sage: 190 14% 52%;
+    --sage-light: 190 18% 92%;
     --sand: 35 30% 90%;
     --sand-light: 40 33% 97%;
     --teal: 170 22% 24%;
     --brand-dark: 170 22% 24%;
     --brand-cream: 60 20% 94%;
+    --brand-sage: 190 14% 52%;
     --warm-text: 150 15% 15%;
     --warm-text-light: 150 10% 45%;
 
