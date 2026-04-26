@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Heart, Brain, Users } from "lucide-react";
 import Layout from "@/components/Layout";
-import heroImage from "@/assets/hero-pmt.jpg";
 import behandelingImage from "@/assets/pmt-behandeling.jpg";
 import logoLight from "@/assets/logo-light.jpg";
 
@@ -9,49 +8,47 @@ const HomePage = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative min-h-[85vh] flex items-center">
-        <div className="absolute inset-0">
-          <img src={heroImage} alt="Rustige therapieruimte" className="w-full h-full object-cover" width={1920} height={1080} />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/30" />
-        </div>
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-xl">
-            <p className="text-primary font-medium text-sm tracking-widest uppercase mb-4 animate-fade-in-up">
-              Stap Vooruit pmt · Hengelo
-            </p>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-              Samen werken aan{" "}
-              <span className="text-primary">lichaam</span> én{" "}
-              <span className="text-accent">geest</span>
-            </h1>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              Stap Vooruit pmt — de psychomotorische therapiepraktijk van Cato Smit, gevestigd bij TeamFysio Hengelo.
-              Voor kinderen en volwassenen die baat hebben bij een lichaamsgerichte
-              en bewegingsgerichte aanpak.
-            </p>
-            <div className="flex flex-wrap gap-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium text-sm hover:opacity-90 transition-opacity"
-              >
-                Neem contact op <ArrowRight size={16} />
-              </Link>
-              <Link
-                to="/behandelingen"
-                className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-medium text-sm hover:bg-secondary/80 transition-colors"
-              >
-                Meer over PMT
-              </Link>
+      <section className="relative min-h-[85vh] flex items-center bg-background">
+        <div className="container mx-auto px-6 relative z-10 py-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <p className="text-primary font-medium text-sm tracking-widest uppercase mb-4 animate-fade-in-up">
+                Stap Vooruit pmt · Hengelo
+              </p>
+              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+                Samen werken aan{" "}
+                <span className="text-primary">lichaam</span> én{" "}
+                <span className="text-accent">geest</span>
+              </h1>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+                Stap Vooruit pmt — de psychomotorische therapiepraktijk van Cato Smit, gevestigd bij TeamFysio Hengelo.
+                Voor kinderen en volwassenen die baat hebben bij een lichaamsgerichte
+                en bewegingsgerichte aanpak.
+              </p>
+              <div className="flex flex-wrap gap-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium text-sm hover:opacity-90 transition-opacity"
+                >
+                  Neem contact op <ArrowRight size={16} />
+                </Link>
+                <Link
+                  to="/behandelingen"
+                  className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-medium text-sm hover:bg-secondary/80 transition-colors"
+                >
+                  Meer over PMT
+                </Link>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2 flex justify-center animate-fade-in-up">
+              <img
+                src={logoLight}
+                alt="Stap Vooruit pmt logo"
+                className="w-full max-w-md lg:max-w-xl h-auto object-contain rounded-2xl shadow-xl"
+              />
             </div>
           </div>
         </div>
-        {/* Subtle logo watermark in corner */}
-        <img
-          src={logoLight}
-          alt=""
-          aria-hidden="true"
-          className="hidden lg:block absolute bottom-6 right-6 h-24 w-auto object-contain opacity-80 rounded-lg shadow-md z-10"
-        />
       </section>
 
       {/* Features */}
