@@ -50,7 +50,7 @@ const Footer = () => {
 
         <div className="mt-10 pt-6 border-t border-white/10 text-center">
           <p className="text-xs opacity-70">
-            © {new Date().getFullYear()} Stap Vooruit PMT — Cato Smit, Psychomotorische Therapie. Praktijk bij{" "}
+            © {new Date().getFullYear()} Stap Vooruit PMT — Cato Pellewever, Psychomotorische Therapie. Praktijk bij{" "}
             <a href="https://teamfysio.nl/locaties/teamfysio-locatie-hengelo" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-100">
               TeamFysio Hengelo
             </a>

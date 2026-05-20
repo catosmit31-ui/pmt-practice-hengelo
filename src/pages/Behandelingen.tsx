@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Activity, Smile, Shield, Wind, Footprints, HandHeart } from "lucide-react";
 import Layout from "@/components/Layout";
-import behandelingImage from "@/assets/pmt-behandeling.jpg";
 
 const klachten = [
   { icon: Wind, title: "Stress & Burn-out", desc: "Leren ontspannen, grenzen herkennen en spanning loslaten via het lichaam." },
@@ -38,37 +37,27 @@ const Behandelingen = () => {
       {/* How it works */}
       <section className="py-16 bg-card">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="font-heading text-3xl font-semibold text-foreground mb-6">
-                Hoe werkt PMT?
-              </h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  Bij PMT staat het <strong className="text-foreground">ervaren</strong> centraal,
-                  niet alleen het praten. Door bewegingsoefeningen, ontspanningsoefeningen,
-                  lichaamsbewustzijnsoefeningen en soms spel ontdek je patronen die
-                  in een gesprek niet altijd naar boven komen.
-                </p>
-                <p>
-                  De therapeut observeert hoe je beweegt, reageert en omgaat met
-                  uitdagingen. Samen zoeken jullie naar nieuwe manieren om met
-                  klachten om te gaan.
-                </p>
-                <p>
-                  PMT is geschikt voor <strong className="text-foreground">alle leeftijden</strong>:
-                  van jonge kinderen die vastlopen in hun ontwikkeling tot volwassenen
-                  met stress, angst of lichamelijke spanning.
-                </p>
-              </div>
-            </div>
-            <div>
-              <img
-                src={behandelingImage}
-                alt="PMT therapie sessie"
-                className="rounded-xl shadow-lg w-full object-cover aspect-[4/3]"
-                loading="lazy"
-              />
+          <div className="max-w-3xl">
+            <h2 className="font-heading text-3xl font-semibold text-foreground mb-6">
+              Hoe werkt PMT?
+            </h2>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Bij PMT staat het <strong className="text-foreground">ervaren</strong> centraal,
+                niet alleen het praten. Door bewegingsoefeningen, ontspanningsoefeningen,
+                lichaamsbewustzijnsoefeningen en soms spel ontdek je patronen die
+                in een gesprek niet altijd naar boven komen.
+              </p>
+              <p>
+                De therapeut observeert hoe je beweegt, reageert en omgaat met
+                uitdagingen. Samen zoeken jullie naar nieuwe manieren om met
+                klachten om te gaan.
+              </p>
+              <p>
+                PMT is geschikt voor <strong className="text-foreground">alle leeftijden</strong>:
+                van jonge kinderen die vastlopen in hun ontwikkeling tot volwassenen
+                met stress, angst of lichamelijke spanning.
+              </p>
             </div>
           </div>
         </div>
