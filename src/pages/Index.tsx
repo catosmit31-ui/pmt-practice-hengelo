@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Heart, Brain, Users } from "lucide-react";
 import Layout from "@/components/Layout";
-import behandelingImage from "@/assets/pmt-behandeling.jpg";
 import logoLight from "@/assets/logo-light.jpg";
 
 const HomePage = () => {
@@ -101,40 +100,28 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* CTA with image */}
+      {/* CTA */}
       <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
-              <img
-                src={behandelingImage}
-                alt="Psychomotorische therapie oefening"
-                className="rounded-xl shadow-lg w-full object-cover aspect-[4/3]"
-                loading="lazy"
-              />
-            </div>
-            <div className="order-1 lg:order-2">
-              <h2 className="font-heading text-3xl font-semibold text-foreground mb-6">
-                Ervaar de kracht van bewegen
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Bij psychomotorische therapie staat het ervaren centraal. Door te
-                bewegen, te voelen en te experimenteren ontdekt u patronen en
-                mogelijkheden die in een gesprek alleen niet naar voren komen.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                De praktijk is gevestigd bij TeamFysio aan de Beitelstraat 1 in
-                Hengelo — een professionele omgeving waar u zich op uw gemak kunt
-                voelen.
-              </p>
-              <Link
-                to="/over-mij"
-                className="inline-flex items-center gap-2 text-primary font-medium text-sm hover:underline"
-              >
-                Lees meer over Cato <ArrowRight size={16} />
-              </Link>
-            </div>
-          </div>
+        <div className="container mx-auto px-6 max-w-3xl">
+          <h2 className="font-heading text-3xl font-semibold text-foreground mb-6">
+            Ervaar de kracht van bewegen
+          </h2>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            Bij psychomotorische therapie staat het ervaren centraal. Door te
+            bewegen, te voelen en te experimenteren ontdekt u patronen en
+            mogelijkheden die in een gesprek alleen niet naar voren komen.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-8">
+            De praktijk is gevestigd bij TeamFysio aan de Beitelstraat 1 in
+            Hengelo — een professionele omgeving waar u zich op uw gemak kunt
+            voelen.
+          </p>
+          <Link
+            to="/over-mij"
+            className="inline-flex items-center gap-2 text-primary font-medium text-sm hover:underline"
+          >
+            Lees meer over Cato <ArrowRight size={16} />
+          </Link>
         </div>
       </section>
     </Layout>
