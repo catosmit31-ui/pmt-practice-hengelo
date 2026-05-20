@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Activity, Smile, Shield, Wind, Footprints, HandHeart } from "lucide-react";
+import { ArrowRight, Activity, Smile, Shield, Wind, Footprints, HandHeart, Wallet, HeartPulse, Info } from "lucide-react";
 import Layout from "@/components/Layout";
 
 const klachten = [
@@ -22,26 +22,111 @@ const Behandelingen = () => {
               Behandelingen
             </p>
             <h1 className="font-heading text-4xl md:text-5xl font-semibold text-foreground leading-tight mb-6">
-              Wat is Psychomotorische Therapie?
+              Behandelingen van Stap Vooruit PMT
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Psychomotorische therapie (PMT) is een ervaringsgerichte therapievorm
-              die gebruik maakt van het lichaam als ingang voor verandering. Door
-              te bewegen, te voelen en te ervaren werk je aan psychische,
-              emotionele en gedragsmatige klachten.
+              Stap Vooruit PMT biedt twee behandelvormen aan die beide inzetten op
+              lichaam, beweging en ervaring als ingang voor verandering.
             </p>
           </div>
         </div>
       </section>
 
-      {/* How it works */}
+      {/* Behandeling keuzes */}
       <section className="py-16 bg-card">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* PMT Card */}
+            <div className="bg-background rounded-xl p-8 border border-border hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 rounded-xl bg-sage-light flex items-center justify-center mb-5">
+                <HeartPulse className="text-primary" size={24} />
+              </div>
+              <h2 className="font-heading text-2xl font-semibold text-foreground mb-3">
+                Psychomotorische Therapie
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Een ervaringsgerichte therapie die het lichaam als ingang gebruikt.
+                Door te bewegen, te voelen en te ervaren werk je aan psychische,
+                emotionele en gedragsmatige klachten.
+              </p>
+              <Link
+                to="#pmt"
+                className="inline-flex items-center gap-2 text-primary font-medium text-sm hover:underline"
+              >
+                Meer over PMT <ArrowRight size={16} />
+              </Link>
+            </div>
+
+            {/* Runningtherapie Card */}
+            <div className="bg-background rounded-xl p-8 border border-border hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 rounded-xl bg-sage-light flex items-center justify-center mb-5">
+                <Activity className="text-primary" size={24} />
+              </div>
+              <h2 className="font-heading text-2xl font-semibold text-foreground mb-3">
+                Runningtherapie
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Bewegen in de buitenlucht als middel voor psychische verwerking en
+                herstel. Samen werken aan doelen door middel van wandelen of hardlopen.
+              </p>
+              <Link
+                to="#runningtherapie"
+                className="inline-flex items-center gap-2 text-primary font-medium text-sm hover:underline"
+              >
+                Meer over runningtherapie <ArrowRight size={16} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Algemene informatie */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <div className="w-12 h-12 rounded-xl bg-sage-light flex items-center justify-center mx-auto mb-5">
+              <Info className="text-primary" size={24} />
+            </div>
+            <h2 className="font-heading text-3xl font-semibold text-foreground mb-4">
+              Algemene informatie
+            </h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Op deze pagina vindt u meer informatie over de behandelingen die
+              Stap Vooruit PMT aanbiedt. Ook kunt u hieronder informatie vinden
+              over veelvoorkomende klachten en vergoedingen.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+            <a
+              href="#klachten"
+              className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium text-sm hover:opacity-90 transition-opacity"
+            >
+              <Activity size={16} /> Klachten
+            </a>
+            <a
+              href="#vergoedingen"
+              className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-medium text-sm hover:opacity-90 transition-opacity"
+            >
+              <Wallet size={16} /> Vergoedingen
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Psychomotorische Therapie detail */}
+      <section id="pmt" className="py-20 bg-card">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
             <h2 className="font-heading text-3xl font-semibold text-foreground mb-6">
-              Hoe werkt PMT?
+              Psychomotorische Therapie
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Psychomotorische therapie (PMT) is een ervaringsgerichte therapievorm
+                die gebruik maakt van het lichaam als ingang voor verandering. Door
+                te bewegen, te voelen en te ervaren werk je aan psychische,
+                emotionele en gedragsmatige klachten.
+              </p>
               <p>
                 Bij PMT staat het <strong className="text-foreground">ervaren</strong> centraal,
                 niet alleen het praten. Door bewegingsoefeningen, ontspanningsoefeningen,
@@ -63,23 +148,52 @@ const Behandelingen = () => {
         </div>
       </section>
 
+      {/* Runningtherapie detail */}
+      <section id="runningtherapie" className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-heading text-3xl font-semibold text-foreground mb-6">
+              Runningtherapie
+            </h2>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Runningtherapie is een vorm van bewegingstherapie waarbij wandelen of
+                hardlopen wordt ingezet als therapievorm. Samen met de therapeut werk
+                je aan persoonlijke doelen terwijl je in beweging bent in de buitenlucht.
+              </p>
+              <p>
+                Bewegen in de buitenlucht heeft een positief effect op je stemming,
+                stressniveau en algehele gezondheid. Door tegelijkertijd in gesprek
+                te gaan over wat je bezighoudt, ontstaat er ruimte voor verwerking
+                en inzicht.
+              </p>
+              <p>
+                Runningtherapie is geschikt voor volwassenen en jongeren die willen
+                werken aan klachten zoals stress, burn-out, angst of somberheid en
+                daarnaast behoefte hebben aan meer beweging in het dagelijks leven.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Klachten */}
-      <section className="py-20">
+      <section id="klachten" className="py-20 bg-card">
         <div className="container mx-auto px-6">
           <div className="text-center mb-14">
             <h2 className="font-heading text-3xl font-semibold text-foreground mb-4">
               Waarvoor kunt u terecht?
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              PMT kan helpen bij uiteenlopende klachten. Hieronder vindt u een
-              overzicht van veelvoorkomende hulpvragen.
+              PMT en runningtherapie kunnen helpen bij uiteenlopende klachten.
+              Hieronder vindt u een overzicht van veelvoorkomende hulpvragen.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {klachten.map((item, i) => (
               <div
                 key={i}
-                className="bg-card rounded-xl p-6 border border-border hover:shadow-md transition-shadow"
+                className="bg-background rounded-xl p-6 border border-border hover:shadow-md transition-shadow"
               >
                 <div className="w-10 h-10 rounded-lg bg-sage-light flex items-center justify-center mb-4">
                   <item.icon className="text-primary" size={20} />
@@ -96,6 +210,64 @@ const Behandelingen = () => {
         </div>
       </section>
 
+      {/* Vergoedingen */}
+      <section id="vergoedingen" className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-lg bg-sage-light flex items-center justify-center">
+                <Wallet className="text-primary" size={20} />
+              </div>
+              <h2 className="font-heading text-3xl font-semibold text-foreground">
+                Vergoedingen
+              </h2>
+            </div>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Psychomotorische therapie wordt in veel gevallen (gedeeltelijk)
+                vergoed vanuit de aanvullende verzekering. De hoogte van de
+                vergoeding is afhankelijk van uw zorgverzekeraar en het type
+                aanvullende verzekering dat u heeft afgesloten.
+              </p>
+              <p>
+                Ik ben aangesloten bij het{" "}
+                <strong className="text-foreground">VBAG</strong>{" "}
+                (Vereniging voor Beroepsbeoefenaars Alternatieve Geneeswijzen) en
+                het{" "}
+                <strong className="text-foreground">RBCZ</strong>{" "}
+                (Register Beroepsbeoefenaren Complementaire Zorg). Hierdoor is
+                behandeling in veel gevallen verzekerd via uw aanvullende
+                zorgverzekering.
+              </p>
+              <p>
+                U dient zelf bij uw zorgverzekeraar na te gaan of u in aanmerking
+                komt voor vergoeding. Op aanvraag kan ik een offerte of factuur
+                opstellen voor declaratie bij uw verzekeraar.
+              </p>
+              <div className="mt-6 p-5 bg-card rounded-xl border border-border">
+                <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
+                  Tarieven
+                </h3>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex justify-between">
+                    <span>Intakegesprek (60 minuten)</span>
+                    <span className="font-medium text-foreground">€ 85,00</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span>Behandeling (60 minuten)</span>
+                    <span className="font-medium text-foreground">€ 85,00</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span>Behandeling (90 minuten)</span>
+                    <span className="font-medium text-foreground">€ 120,00</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-primary">
         <div className="container mx-auto px-6 text-center">
@@ -104,7 +276,7 @@ const Behandelingen = () => {
           </h2>
           <p className="text-primary-foreground/80 max-w-xl mx-auto mb-8">
             Neem vrijblijvend contact op voor een kennismakingsgesprek. Samen
-            kijken we wat PMT voor u of uw kind kan betekenen.
+            kijken we wat PMT of runningtherapie voor u of uw kind kan betekenen.
           </p>
           <Link
             to="/contact"
