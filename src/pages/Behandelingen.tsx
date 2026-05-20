@@ -95,7 +95,7 @@ const Behandelingen = () => {
               Stap Vooruit PMT aanbiedt. Ook kunt u hieronder informatie vinden
               over veelvoorkomende klachten en vergoedingen.
             </p>
-          </<div>
+          </div>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
             <a
               href="#klachten"
