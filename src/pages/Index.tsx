@@ -21,7 +21,7 @@ const HomePage = () => {
                 <span className="text-accent">beweging</span>
               </h1>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-                Stap Vooruit PMT is de praktijk voor psychomotorische therapie van Cato Smit
+                Stap Vooruit PMT is de praktijk voor psychomotorische therapie van Cato Pellewever
                 in Hengelo. Door beweging en ervaringsgerichte oefeningen leer je lichaamssignalen,
                 emoties en gedragspatronen beter herkennen — voor kinderen, jongeren en (jong)volwassenen.
               </p>

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, GraduationCap, Briefcase } from "lucide-react";
 import Layout from "@/components/Layout";
-import aboutImage from "@/assets/about-cato.jpg";
 
 const OverMij = () => {
   return (
@@ -9,45 +8,33 @@ const OverMij = () => {
       {/* Hero */}
       <section className="py-20 bg-card">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-primary font-medium text-sm tracking-widest uppercase mb-4">
-                Over Mij
+          <div className="max-w-3xl">
+            <p className="text-primary font-medium text-sm tracking-widest uppercase mb-4">
+              Over Mij
+            </p>
+            <h1 className="font-heading text-4xl md:text-5xl font-semibold text-foreground leading-tight mb-6">
+              Cato Pellewever
+            </h1>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Mijn naam is Cato Pellewever. Ik ben opgegroeid in Delden en woon sinds een aantal jaar samen met mijn man in Hengelo.
               </p>
-              <h1 className="font-heading text-4xl md:text-5xl font-semibold text-foreground leading-tight mb-6">
-                Cato Smit
-              </h1>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                Mijn naam is Cato Smit, psychomotorisch therapeut (PMT). Sinds juni
-                heb ik mijn eigen praktijk, waarin ik kinderen en (jong)volwassenen
-                help die vastlopen in het dagelijks leven. Denk aan stress, moeite met
-                grenzen aangeven, onzekerheid over gevoelens of het ontwikkelen van
-                meer zelfvertrouwen.
+              <p>
+                In 2021 ben ik afgestudeerd als psychomotorisch therapeut aan de opleiding Psychomotorische Therapie op Windesheim in Zwolle. Sinds mijn afstuderen werk ik met veel plezier in de zorg. Ik ben gestart binnen de jeugdzorg en vrijwel tegelijkertijd aan de slag gegaan als psychomotorisch therapeut bij Aveleijn, een warme organisatie voor mensen met een verstandelijke beperking waar ik nog altijd met veel passie werk.
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Binnen PMT staat ervarend leren centraal. Door te bewegen krijg je meer
-                inzicht in jezelf. Niet alles hoeft in woorden — juist door te doen en
-                te voelen ontstaat ruimte voor verandering.
+              <p>
+                In mijn werk vind ik het belangrijk dat iemand zich gehoord, gezien en veilig voelt. Ik probeer echt aan te sluiten bij de ander en kijk samen naar wat iemand nodig heeft. Daarbij werk ik op een nuchtere, betrokken en laagdrempelige manier.
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                Een goede klik is voor mij essentieel. Ik werk nuchter en praktisch,
-                met aandacht voor beweging, serieuze momenten én ruimte voor humor.
+              <p>
+                In psychomotorische therapie staan lichaam en gevoel centraal. Soms is het moeilijk om woorden te geven aan wat je voelt, terwijl je lichaam vaak al veel laat zien. Door samen te ervaren en in beweging te komen, ontstaat meer inzicht in jezelf en wat je nodig hebt.
               </p>
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium text-sm hover:opacity-90 transition-opacity"
-              >
-                Neem contact op <ArrowRight size={16} />
-              </Link>
             </div>
-            <div className="flex justify-center">
-              <img
-                src={aboutImage}
-                alt="Cato Smit, psychomotorisch therapeut"
-                className="rounded-xl shadow-lg w-full max-w-md object-cover aspect-square"
-                loading="lazy"
-              />
-            </div>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium text-sm hover:opacity-90 transition-opacity mt-8"
+            >
+              Neem contact op <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
       </section>
@@ -90,6 +77,23 @@ const OverMij = () => {
                     Naast mijn eigen praktijk werk ik nog steeds met veel plezier
                     bij Aveleijn, een zorgorganisatie voor mensen met een
                     verstandelijke beperking. Hier ontwikkel ik mij verder als therapeut.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="w-12 h-12 rounded-lg bg-sage-light flex items-center justify-center shrink-0">
+                  <Briefcase className="text-primary" size={22} />
+                </div>
+                <div>
+                  <h3 className="font-heading text-lg font-semibold text-foreground mb-1">
+                    Kentalis
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-1">Psychomotorisch therapeut · september '25 – maart '26</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Een half jaar gewerkt als psychomotorisch therapeut bij Kentalis,
+                    een organisatie gespecialiseerd in zorg en onderwijs voor mensen
+                    met een gehoor- of communicatiebeperking.
                   </p>
                 </div>
               </div>
