@@ -279,6 +279,67 @@ const Behandelingen = () => {
                   </li>
                 </ul>
               </div>
+              <div className="mt-4 p-5 bg-card rounded-xl border border-border">
+                <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
+                  AGB-codes
+                </h3>
+                <ul className="space-y-1 text-sm">
+                  <li className="flex justify-between">
+                    <span>AGB-code zorgverlener</span>
+                    <span className="font-medium text-foreground">90121918</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span>AGB-code praktijk</span>
+                    <span className="font-medium text-foreground">90096874</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Klachtenregeling */}
+      <section id="klachten" className="py-20 bg-card">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-lg bg-sage-light flex items-center justify-center">
+                <MessageCircleWarning className="text-primary" size={20} />
+              </div>
+              <h2 className="font-heading text-3xl font-semibold text-foreground">
+                Klachten
+              </h2>
+            </div>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Ik vind het heel vervelend als je ontevreden bent over de
+                behandeling of de manier waarop het contact verloopt. Mijn
+                voorkeur gaat er altijd naar uit om hier eerst samen in gesprek
+                over te gaan. Vaak ontstaat er door open te bespreken wat er
+                speelt al ruimte om er met elkaar uit te komen.
+              </p>
+              <p>
+                Kom je er samen met mij niet uit, dan kun je gebruik maken van
+                de onafhankelijke klachten- en geschillenregeling waarbij ik ben
+                aangesloten. Stap Vooruit PMT is aangesloten bij{" "}
+                <strong className="text-foreground">NIBIG</strong>{" "}
+                in het kader van de{" "}
+                <strong className="text-foreground">Wet kwaliteit, klachten en geschillen zorg (Wkkgz)</strong>.
+                Via NIBIG kun je kosteloos een onafhankelijke klachtenfunctionaris
+                inschakelen die met je meedenkt en bemiddelt.
+              </p>
+              <p>
+                Meer informatie over de klachtenregeling vind je op{" "}
+                <a
+                  href="https://www.nibig.nl/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline inline-flex items-center gap-1"
+                >
+                  nibig.nl <ExternalLink size={14} />
+                </a>.
+              </p>
             </div>
           </div>
         </div>
@@ -288,11 +349,11 @@ const Behandelingen = () => {
       <section className="py-16 bg-primary">
         <div className="container mx-auto px-6 text-center">
           <h2 className="font-heading text-3xl font-semibold text-primary-foreground mb-4">
-            Herkent u zich hierin?
+            Herken je je hierin?
           </h2>
           <p className="text-primary-foreground/80 max-w-xl mx-auto mb-8">
             Neem vrijblijvend contact op voor een kennismakingsgesprek. Samen
-            kijken we wat PMT of runningtherapie voor u of uw kind kan betekenen.
+            kijken we wat PMT of runningtherapie voor jou kan betekenen.
           </p>
           <Link
             to="/contact"
