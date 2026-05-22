@@ -1,14 +1,12 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Activity, Smile, Shield, Wind, Footprints, HandHeart, Wallet, HeartPulse, Info } from "lucide-react";
+import { ArrowRight, Activity, Smile, Shield, Wind, Footprints, Wallet, HeartPulse, Info } from "lucide-react";
 import Layout from "@/components/Layout";
 
 const klachten = [
   { icon: Wind, title: "Stress & Burn-out", desc: "Leren ontspannen, grenzen herkennen en spanning loslaten via het lichaam." },
   { icon: Shield, title: "Angst & Onzekerheid", desc: "Meer vertrouwen opbouwen in jezelf en je lichaam door ervaringsgericht oefenen." },
   { icon: Smile, title: "Emotieregulatie", desc: "Leren omgaan met emoties via beweging en lichaamsbeleving." },
-  { icon: Activity, title: "Psychosomatische Klachten", desc: "Lichamelijke klachten met een psychische oorsprong aanpakken." },
   { icon: Footprints, title: "Gedragsproblemen", desc: "Bij kinderen: werken aan zelfregulatie, concentratie en sociaal gedrag." },
-  { icon: HandHeart, title: "Trauma & Rouw", desc: "Lichaamsgerichte verwerking van ingrijpende ervaringen." },
 ];
 
 const Behandelingen = () => {

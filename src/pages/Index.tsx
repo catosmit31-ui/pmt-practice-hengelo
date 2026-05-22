@@ -15,9 +15,8 @@ const HomePage = () => {
                 Stap Vooruit PMT · Hengelo
               </p>
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-                Een{" "}
-                <span className="text-primary">stap vooruit</span> via{" "}
-                <span className="text-accent">beweging</span>
+                <span className="text-primary">Psychomotorische</span>{" "}
+                <span className="text-accent">therapie</span>
               </h1>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
                 Stap Vooruit PMT is de praktijk voor psychomotorische therapie van Cato Pellewever
