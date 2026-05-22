@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram } from "lucide-react";
 import logoLight from "@/assets/logo-light.jpg";
 
 const Footer = () => {
@@ -44,6 +44,10 @@ const Footer = () => {
                 <Mail size={16} className="shrink-0" />
                 <a href="mailto:info@stapvooruitpmt.nl" className="hover:opacity-100 transition-opacity">info@stapvooruitpmt.nl</a>
               </div>
+              <div className="flex items-center gap-2">
+                <Instagram size={16} className="shrink-0" />
+                <a href="https://instagram.com/stapvooruitPMT" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-opacity">@stapvooruitPMT</a>
+              </div>
             </div>
           </div>
         </div>
@@ -55,6 +59,7 @@ const Footer = () => {
               TeamFysio Hengelo
             </a>
           </p>
+          <p className="text-xs opacity-60 mt-2">KVK 99872277</p>
         </div>
       </div>
     </footer>
