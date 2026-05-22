@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MapPin, Phone, Mail, Clock, ExternalLink, Instagram, Send } from "lucide-react";
+import { Clock, Send } from "lucide-react";
 import Layout from "@/components/Layout";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -21,12 +21,12 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.naam.trim() || !form.email.trim() || !form.bericht.trim()) {
-      toast({ title: "Vul a.u.b. uw naam, e-mail en bericht in.", variant: "destructive" });
+      toast({ title: "Vul a.u.b. je naam, e-mail en bericht in.", variant: "destructive" });
       return;
     }
     const body = `Naam: ${form.naam}%0D%0AE-mail: ${form.email}%0D%0ATelefoon: ${form.telefoon}%0D%0A%0D%0A${form.bericht}`;
     window.location.href = `mailto:info@stapvooruitpmt.nl?subject=${encodeURIComponent("Aanmelding via website — " + form.naam)}&body=${body}`;
-    toast({ title: "Bedankt! Uw e-mailprogramma wordt geopend om het bericht te versturen." });
+    toast({ title: "Bedankt! Je e-mailprogramma wordt geopend om het bericht te versturen." });
   };
 
   return (
@@ -41,85 +41,14 @@ const Contact = () => {
               Neem contact op
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Heeft u vragen of wilt u een afspraak maken? Neem gerust contact
-              op. Ik help u graag verder.
+              Heb je vragen of wil je een afspraak maken? Neem gerust contact
+              op. Ik help je graag verder.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            {/* Contact info */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="font-heading text-2xl font-semibold text-foreground mb-6">
-                  Locatie & Bereikbaarheid
-                </h2>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  De praktijk is gevestigd bij{" "}
-                  <a
-                    href="https://teamfysio.nl/locaties/teamfysio-locatie-hengelo"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline inline-flex items-center gap-1"
-                  >
-                    TeamFysio Hengelo <ExternalLink size={14} />
-                  </a>
-                  , een moderne fysiopraktijk met uitstekende faciliteiten.
-                </p>
-
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-sage-light flex items-center justify-center shrink-0">
-                      <MapPin className="text-primary" size={18} />
-                    </div>
-                    <div>
-                      <p className="font-medium text-foreground text-sm">Adres</p>
-                      <p className="text-muted-foreground text-sm">Beitelstraat 1</p>
-                      <p className="text-muted-foreground text-sm">7556 ND Hengelo</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-sage-light flex items-center justify-center shrink-0">
-                      <Phone className="text-primary" size={18} />
-                    </div>
-                    <div>
-                      <p className="font-medium text-foreground text-sm">Telefoon</p>
-                      <a href="tel:+31683304260" className="text-muted-foreground text-sm hover:text-primary transition-colors">
-                        +31 6 83 30 42 60
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-sage-light flex items-center justify-center shrink-0">
-                      <Mail className="text-primary" size={18} />
-                    </div>
-                    <div>
-                      <p className="font-medium text-foreground text-sm">E-mail</p>
-                      <a href="mailto:info@stapvooruitpmt.nl" className="text-muted-foreground text-sm hover:text-primary transition-colors">
-                        info@stapvooruitpmt.nl
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-sage-light flex items-center justify-center shrink-0">
-                      <Instagram className="text-primary" size={18} />
-                    </div>
-                    <div>
-                      <p className="font-medium text-foreground text-sm">Instagram</p>
-                      <a href="https://instagram.com/stapvooruitPMT" target="_blank" rel="noopener noreferrer" className="text-muted-foreground text-sm hover:text-primary transition-colors">
-                        @stapvooruitPMT
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+          <div className="max-w-2xl mx-auto">
             {/* Openingstijden */}
-            <div>
-              <div className="bg-card rounded-xl border border-border p-8">
+            <div className="bg-card rounded-xl border border-border p-8">
                 <div className="flex items-center gap-2 mb-6">
                   <Clock className="text-primary" size={20} />
                   <h3 className="font-heading text-xl font-semibold text-foreground">
@@ -143,7 +72,6 @@ const Contact = () => {
                     </div>
                   ))}
                 </div>
-              </div>
             </div>
           </div>
 
@@ -154,7 +82,7 @@ const Contact = () => {
                 Aanmelden of een bericht achterlaten
               </h2>
               <p className="text-muted-foreground text-sm mb-6">
-                Laat uw gegevens en een korte boodschap achter. Ik neem zo spoedig mogelijk contact met u op.
+                Laat je gegevens en een korte boodschap achter. Ik neem zo spoedig mogelijk contact met je op.
               </p>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

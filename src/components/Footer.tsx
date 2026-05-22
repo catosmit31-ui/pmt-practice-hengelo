@@ -15,7 +15,6 @@ const Footer = () => {
             />
             <p className="text-sm leading-relaxed opacity-80">
               Praktijk voor psychomotorische therapie in Hengelo.
-              Voor kinderen, jongeren en (jong)volwassenen.
             </p>
           </div>
 

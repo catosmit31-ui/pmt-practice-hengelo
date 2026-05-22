@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Activity, Smile, Shield, Wind, Footprints, Wallet, HeartPulse, Info } from "lucide-react";
+import { ArrowRight, Activity, Smile, Shield, Wind, Footprints, Wallet, HeartPulse, Info, MessageCircleWarning, ExternalLink } from "lucide-react";
 import Layout from "@/components/Layout";
 
-const klachten = [
-  { icon: Wind, title: "Stress & Burn-out", desc: "Leren ontspannen, grenzen herkennen en spanning loslaten via het lichaam." },
-  { icon: Shield, title: "Angst & Onzekerheid", desc: "Meer vertrouwen opbouwen in jezelf en je lichaam door ervaringsgericht oefenen." },
+const hulpvragen = [
+  { icon: Wind, title: "Stress + Burn-out", desc: "Leren ontspannen, grenzen herkennen en spanning loslaten via het lichaam." },
+  { icon: Shield, title: "Angst + Onzekerheid", desc: "Meer vertrouwen opbouwen in jezelf en je lichaam door ervaringsgericht oefenen." },
   { icon: Smile, title: "Emotieregulatie", desc: "Leren omgaan met emoties via beweging en lichaamsbeleving." },
   { icon: Footprints, title: "Gedragsproblemen", desc: "Bij kinderen: werken aan zelfregulatie, concentratie en sociaal gedrag." },
 ];
@@ -89,23 +89,29 @@ const Behandelingen = () => {
               Algemene informatie
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Op deze pagina vindt u meer informatie over de behandelingen die
-              Stap Vooruit PMT aanbiedt. Ook kunt u hieronder informatie vinden
-              over veelvoorkomende klachten en vergoedingen.
+              Op deze pagina vind je meer informatie over de behandelingen die
+              Stap Vooruit PMT aanbiedt. Ook vind je hieronder informatie over
+              veelvoorkomende hulpvragen, vergoedingen en de klachtenregeling.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
             <a
-              href="#klachten"
+              href="#hulpvragen"
               className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium text-sm hover:opacity-90 transition-opacity"
             >
-              <Activity size={16} /> Klachten
+              <Activity size={16} /> Hulpvragen
             </a>
             <a
               href="#vergoedingen"
               className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-medium text-sm hover:opacity-90 transition-opacity"
             >
               <Wallet size={16} /> Vergoedingen
+            </a>
+            <a
+              href="#klachten"
+              className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-medium text-sm hover:opacity-90 transition-opacity"
+            >
+              <MessageCircleWarning size={16} /> Klachten
             </a>
           </div>
         </div>
@@ -175,20 +181,20 @@ const Behandelingen = () => {
         </div>
       </section>
 
-      {/* Klachten */}
-      <section id="klachten" className="py-20 bg-card">
+      {/* Hulpvragen */}
+      <section id="hulpvragen" className="py-20 bg-card">
         <div className="container mx-auto px-6">
           <div className="text-center mb-14">
             <h2 className="font-heading text-3xl font-semibold text-foreground mb-4">
-              Waarvoor kunt u terecht?
+              Hulpvragen — waarvoor kun je terecht?
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               PMT en runningtherapie kunnen helpen bij uiteenlopende klachten.
-              Hieronder vindt u een overzicht van veelvoorkomende hulpvragen.
+              Hieronder vind je een overzicht van veelvoorkomende hulpvragen.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {klachten.map((item, i) => (
+            {hulpvragen.map((item, i) => (
               <div
                 key={i}
                 className="bg-background rounded-xl p-6 border border-border hover:shadow-md transition-shadow"
@@ -224,8 +230,8 @@ const Behandelingen = () => {
               <p>
                 Psychomotorische therapie wordt in veel gevallen (gedeeltelijk)
                 vergoed vanuit de aanvullende verzekering. De hoogte van de
-                vergoeding is afhankelijk van uw zorgverzekeraar en het type
-                aanvullende verzekering dat u heeft afgesloten.
+                vergoeding is afhankelijk van je zorgverzekeraar en het type
+                aanvullende verzekering dat je hebt afgesloten.
               </p>
               <p>
                 Ik ben aangesloten bij het{" "}
@@ -234,13 +240,25 @@ const Behandelingen = () => {
                 het{" "}
                 <strong className="text-foreground">RBCZ</strong>{" "}
                 (Register Beroepsbeoefenaren Complementaire Zorg). Hierdoor is
-                behandeling in veel gevallen verzekerd via uw aanvullende
+                behandeling in veel gevallen verzekerd via je aanvullende
                 zorgverzekering.
               </p>
               <p>
-                U dient zelf bij uw zorgverzekeraar na te gaan of u in aanmerking
+                Je kunt zelf bij je zorgverzekeraar nagaan of je in aanmerking
                 komt voor vergoeding. Op aanvraag kan ik een offerte of factuur
-                opstellen voor declaratie bij uw verzekeraar.
+                opstellen voor declaratie bij je verzekeraar.
+              </p>
+              <p>
+                Een handig overzicht van zorgverzekeraars die vaktherapie
+                vergoeden vind je op{" "}
+                <a
+                  href="https://www.zorgwijzer.nl/vergoeding/vaktherapie"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline inline-flex items-center gap-1"
+                >
+                  Zorgwijzer <ExternalLink size={14} />
+                </a>.
               </p>
               <div className="mt-6 p-5 bg-card rounded-xl border border-border">
                 <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
@@ -261,6 +279,67 @@ const Behandelingen = () => {
                   </li>
                 </ul>
               </div>
+              <div className="mt-4 p-5 bg-card rounded-xl border border-border">
+                <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
+                  AGB-codes
+                </h3>
+                <ul className="space-y-1 text-sm">
+                  <li className="flex justify-between">
+                    <span>AGB-code zorgverlener</span>
+                    <span className="font-medium text-foreground">90121918</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span>AGB-code praktijk</span>
+                    <span className="font-medium text-foreground">90096874</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Klachtenregeling */}
+      <section id="klachten" className="py-20 bg-card">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-lg bg-sage-light flex items-center justify-center">
+                <MessageCircleWarning className="text-primary" size={20} />
+              </div>
+              <h2 className="font-heading text-3xl font-semibold text-foreground">
+                Klachten
+              </h2>
+            </div>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Ik vind het heel vervelend als je ontevreden bent over de
+                behandeling of de manier waarop het contact verloopt. Mijn
+                voorkeur gaat er altijd naar uit om hier eerst samen in gesprek
+                over te gaan. Vaak ontstaat er door open te bespreken wat er
+                speelt al ruimte om er met elkaar uit te komen.
+              </p>
+              <p>
+                Kom je er samen met mij niet uit, dan kun je gebruik maken van
+                de onafhankelijke klachten- en geschillenregeling waarbij ik ben
+                aangesloten. Stap Vooruit PMT is aangesloten bij{" "}
+                <strong className="text-foreground">NIBIG</strong>{" "}
+                in het kader van de{" "}
+                <strong className="text-foreground">Wet kwaliteit, klachten en geschillen zorg (Wkkgz)</strong>.
+                Via NIBIG kun je kosteloos een onafhankelijke klachtenfunctionaris
+                inschakelen die met je meedenkt en bemiddelt.
+              </p>
+              <p>
+                Meer informatie over de klachtenregeling vind je op{" "}
+                <a
+                  href="https://www.nibig.nl/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline inline-flex items-center gap-1"
+                >
+                  nibig.nl <ExternalLink size={14} />
+                </a>.
+              </p>
             </div>
           </div>
         </div>
@@ -270,11 +349,11 @@ const Behandelingen = () => {
       <section className="py-16 bg-primary">
         <div className="container mx-auto px-6 text-center">
           <h2 className="font-heading text-3xl font-semibold text-primary-foreground mb-4">
-            Herkent u zich hierin?
+            Herken je je hierin?
           </h2>
           <p className="text-primary-foreground/80 max-w-xl mx-auto mb-8">
             Neem vrijblijvend contact op voor een kennismakingsgesprek. Samen
-            kijken we wat PMT of runningtherapie voor u of uw kind kan betekenen.
+            kijken we wat PMT of runningtherapie voor jou kan betekenen.
           </p>
           <Link
             to="/contact"
