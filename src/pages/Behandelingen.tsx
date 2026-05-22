@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Activity, Smile, Shield, Wind, Footprints, HandHeart, Wallet, HeartPulse, Info } from "lucide-react";
+import { ArrowRight, Activity, Smile, Shield, Wind, Footprints, Wallet, HeartPulse, Info } from "lucide-react";
 import Layout from "@/components/Layout";
 
 const klachten = [
