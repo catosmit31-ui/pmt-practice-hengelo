@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Heart, Brain, Users } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
 import logoLight from "@/assets/logo-light.jpg";
 
@@ -18,10 +18,10 @@ const HomePage = () => {
                 <span className="text-primary">Psychomotorische</span>{" "}
                 <span className="text-accent">therapie</span>
               </h1>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
                 Stap Vooruit PMT is de praktijk voor psychomotorische therapie van Cato Pellewever
                 in Hengelo. Door beweging en ervaringsgerichte oefeningen leer je lichaamssignalen,
-                emoties en gedragspatronen beter herkennen — voor kinderen, jongeren en (jong)volwassenen.
+                emoties en gedragspatronen beter herkennen.
               </p>
               <div className="flex flex-wrap gap-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
                 <Link
@@ -49,56 +49,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Features */}
-      <section className="py-20 bg-card">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-14">
-            <h2 className="font-heading text-3xl font-semibold text-foreground mb-4">
-              Wat kan PMT voor u betekenen?
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Psychomotorische therapie richt zich op de wisselwerking tussen
-              lichaam en geest. Door middel van beweging en lichaamsbeleving
-              werken we aan uw klachten.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Brain,
-                title: "Lichaam & Geest",
-                desc: "PMT benut de verbinding tussen lichaam en geest. Via beweging en lichaamservaring werkt u aan emotionele en psychische klachten.",
-              },
-              {
-                icon: Heart,
-                title: "Persoonlijke Aanpak",
-                desc: "Elke behandeling wordt afgestemd op uw unieke situatie, klachten en doelen. U staat centraal in het therapieproces.",
-              },
-              {
-                icon: Users,
-                title: "Voor Jong & Oud",
-                desc: "PMT is geschikt voor zowel kinderen als volwassenen, bij uiteenlopende klachten zoals stress, angst, gedragsproblemen of trauma.",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="bg-background rounded-xl p-8 border border-border hover:shadow-lg transition-shadow"
-              >
-                <div className="w-12 h-12 rounded-lg bg-sage-light flex items-center justify-center mb-5">
-                  <item.icon className="text-primary" size={24} />
-                </div>
-                <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-20">
         <div className="container mx-auto px-6 max-w-3xl">
@@ -107,12 +57,12 @@ const HomePage = () => {
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
             Bij psychomotorische therapie staat het ervaren centraal. Door te
-            bewegen, te voelen en te experimenteren ontdekt u patronen en
+            bewegen, te voelen en te experimenteren ontdek je patronen en
             mogelijkheden die in een gesprek alleen niet naar voren komen.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-8">
             De praktijk is gevestigd bij TeamFysio aan de Beitelstraat 1 in
-            Hengelo — een professionele omgeving waar u zich op uw gemak kunt
+            Hengelo — een professionele omgeving waar je je op je gemak kunt
             voelen.
           </p>
           <Link
