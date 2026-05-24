@@ -108,10 +108,10 @@ const Behandelingen = () => {
               <Wallet size={16} /> Vergoedingen
             </a>
             <a
-              href="#klachten"
+              href="#tarieven"
               className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-medium text-sm hover:opacity-90 transition-opacity"
             >
-              <MessageCircleWarning size={16} /> Klachten
+              <Wallet size={16} /> Tarieven
             </a>
           </div>
         </div>
@@ -132,20 +132,29 @@ const Behandelingen = () => {
                 emotionele en gedragsmatige klachten.
               </p>
               <p>
-                Bij PMT staat het <strong className="text-foreground">ervaren</strong> centraal,
-                niet alleen het praten. Door bewegingsoefeningen, ontspanningsoefeningen,
-                lichaamsbewustzijnsoefeningen en soms spel ontdek je patronen die
+                Bij PMT staat <strong className="text-foreground">ervaren</strong> centraal,
+                niet alleen het praten. Door lichaamsgericht te werken leer je meer
+                in contact te komen met je lijf en ontdek je patronen die wellicht
                 in een gesprek niet altijd naar boven komen.
               </p>
               <p>
-                De therapeut observeert hoe je beweegt, reageert en omgaat met
-                uitdagingen. Samen zoeken jullie naar nieuwe manieren om met
-                klachten om te gaan.
+                In de sessies wordt er geobserveerd hoe je beweegt, reageert en
+                omgaat met uitdagingen. We kunnen aan de hand hiervan samen zoeken
+                naar nieuwe manieren om met klachten om te gaan.
               </p>
               <p>
-                PMT is geschikt voor <strong className="text-foreground">alle leeftijden</strong>:
-                van jonge kinderen die vastlopen in hun ontwikkeling tot volwassenen
-                met stress, angst of lichamelijke spanning.
+                PMT sluit goed aan bij <strong className="text-foreground">kinderen</strong>,
+                omdat kinderen vooral leren door te ervaren en te doen. Praten over
+                gevoelens of gedrag is voor hen vaak nog lastig, terwijl zij via
+                beweging en spel makkelijker kunnen ontdekken, voelen en oefenen.
+              </p>
+              <p>
+                Ook voor <strong className="text-foreground">volwassenen</strong> kan
+                PMT passend zijn. Volwassenen zijn vaak gewend om vooral vanuit
+                het hoofd te functioneren en gevoelens te analyseren, terwijl het
+                contact met het lichaam op de achtergrond raakt. PMT helpt om
+                opnieuw stil te staan bij lichamelijke signalen, emoties en gedrag,
+                zodat denken, voelen en doen meer met elkaar in verbinding komen.
               </p>
             </div>
           </div>
@@ -162,8 +171,8 @@ const Behandelingen = () => {
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
                 Runningtherapie is een vorm van bewegingstherapie waarbij wandelen of
-                hardlopen wordt ingezet als therapievorm. Samen met de therapeut werk
-                je aan persoonlijke doelen terwijl je in beweging bent in de buitenlucht.
+                hardlopen wordt ingezet als therapievorm. Samen werken we aan je
+                persoonlijke doelen terwijl je in beweging bent in de buitenlucht.
               </p>
               <p>
                 Bewegen in de buitenlucht heeft een positief effect op je stemming,
@@ -234,13 +243,12 @@ const Behandelingen = () => {
                 aanvullende verzekering dat je hebt afgesloten.
               </p>
               <p>
-                Ik ben aangesloten bij het{" "}
-                <strong className="text-foreground">VBAG</strong>{" "}
-                (Vereniging voor Beroepsbeoefenaars Alternatieve Geneeswijzen) en
-                het{" "}
-                <strong className="text-foreground">RBCZ</strong>{" "}
-                (Register Beroepsbeoefenaren Complementaire Zorg). Hierdoor is
-                behandeling in veel gevallen verzekerd via je aanvullende
+                Ik ben aangesloten bij de{" "}
+                <strong className="text-foreground">FVB</strong>{" "}
+                (Federatie Vaktherapeutische Beroepen) en de{" "}
+                <strong className="text-foreground">NVPMT</strong>{" "}
+                (Nederlandse Vereniging voor Psychomotorische Therapie). Hierdoor
+                is behandeling in veel gevallen verzekerd via je aanvullende
                 zorgverzekering.
               </p>
               <p>
@@ -260,22 +268,22 @@ const Behandelingen = () => {
                   Zorgwijzer <ExternalLink size={14} />
                 </a>.
               </p>
-              <div className="mt-6 p-5 bg-card rounded-xl border border-border">
+              <div id="tarieven" className="mt-6 p-5 bg-card rounded-xl border border-border scroll-mt-24">
                 <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
                   Tarieven
                 </h3>
                 <ul className="space-y-2 text-sm">
-                  <li className="flex justify-between">
-                    <span>Intakegesprek (60 minuten)</span>
-                    <span className="font-medium text-foreground">€ 85,00</span>
+                  <li className="flex justify-between gap-4">
+                    <span>Intake + opstellen behandelovereenkomst</span>
+                    <span className="font-medium text-foreground whitespace-nowrap">€ 100,00</span>
                   </li>
-                  <li className="flex justify-between">
-                    <span>Behandeling (60 minuten)</span>
-                    <span className="font-medium text-foreground">€ 85,00</span>
+                  <li className="flex justify-between gap-4">
+                    <span>Individuele therapie (per sessie)</span>
+                    <span className="font-medium text-foreground whitespace-nowrap">€ 90,00</span>
                   </li>
-                  <li className="flex justify-between">
-                    <span>Behandeling (90 minuten)</span>
-                    <span className="font-medium text-foreground">€ 120,00</span>
+                  <li className="flex justify-between gap-4">
+                    <span>Opmaken eindverslag</span>
+                    <span className="font-medium text-foreground whitespace-nowrap">€ 50,00</span>
                   </li>
                 </ul>
               </div>
@@ -294,52 +302,30 @@ const Behandelingen = () => {
                   </li>
                 </ul>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Klachtenregeling */}
-      <section id="klachten" className="py-20 bg-card">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-sage-light flex items-center justify-center">
-                <MessageCircleWarning className="text-primary" size={20} />
+              {/* Klachtenregeling — compact, onderaan vergoedingen */}
+              <div id="klachten" className="mt-4 p-5 bg-card rounded-xl border border-border scroll-mt-24">
+                <div className="flex items-center gap-2 mb-2">
+                  <MessageCircleWarning className="text-primary" size={18} />
+                  <h3 className="font-heading text-lg font-semibold text-foreground">
+                    Klachtenregeling
+                  </h3>
+                </div>
+                <p className="text-sm">
+                  Ben je ontevreden over de behandeling? Bespreek het gerust eerst
+                  met mij. Komen we er samen niet uit, dan kun je terecht bij{" "}
+                  <strong className="text-foreground">NIBIG</strong>, waar Stap
+                  Vooruit PMT bij is aangesloten in het kader van de{" "}
+                  <strong className="text-foreground">Wkkgz</strong>. Meer info op{" "}
+                  <a
+                    href="https://www.nibig.nl/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline inline-flex items-center gap-1"
+                  >
+                    nibig.nl <ExternalLink size={12} />
+                  </a>.
+                </p>
               </div>
-              <h2 className="font-heading text-3xl font-semibold text-foreground">
-                Klachten
-              </h2>
-            </div>
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>
-                Ik vind het heel vervelend als je ontevreden bent over de
-                behandeling of de manier waarop het contact verloopt. Mijn
-                voorkeur gaat er altijd naar uit om hier eerst samen in gesprek
-                over te gaan. Vaak ontstaat er door open te bespreken wat er
-                speelt al ruimte om er met elkaar uit te komen.
-              </p>
-              <p>
-                Kom je er samen met mij niet uit, dan kun je gebruik maken van
-                de onafhankelijke klachten- en geschillenregeling waarbij ik ben
-                aangesloten. Stap Vooruit PMT is aangesloten bij{" "}
-                <strong className="text-foreground">NIBIG</strong>{" "}
-                in het kader van de{" "}
-                <strong className="text-foreground">Wet kwaliteit, klachten en geschillen zorg (Wkkgz)</strong>.
-                Via NIBIG kun je kosteloos een onafhankelijke klachtenfunctionaris
-                inschakelen die met je meedenkt en bemiddelt.
-              </p>
-              <p>
-                Meer informatie over de klachtenregeling vind je op{" "}
-                <a
-                  href="https://www.nibig.nl/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline inline-flex items-center gap-1"
-                >
-                  nibig.nl <ExternalLink size={14} />
-                </a>.
-              </p>
             </div>
           </div>
         </div>
