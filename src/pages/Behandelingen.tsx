@@ -253,8 +253,7 @@ const Behandelingen = () => {
               </p>
               <p>
                 Je kunt zelf bij je zorgverzekeraar nagaan of je in aanmerking
-                komt voor vergoeding. Op aanvraag kan ik een offerte of factuur
-                opstellen voor declaratie bij je verzekeraar.
+                komt voor vergoeding.
               </p>
               <p>
                 Een handig overzicht van zorgverzekeraars die vaktherapie
