@@ -44,7 +44,7 @@ const OverMij = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-heading text-3xl font-semibold text-foreground mb-10 text-center">
-              Opleiding + Ervaring
+              Opleiding & Ervaring
             </h2>
 
             <div className="space-y-8">
@@ -122,11 +122,11 @@ const OverMij = () => {
       <section className="py-16 bg-card">
         <div className="container mx-auto px-6 text-center">
           <h2 className="font-heading text-2xl font-semibold text-foreground mb-4">
-            Geaccrediteerd + Erkend
+            Geaccrediteerd & Erkend
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Psychomotorische therapie is een erkende paramedische behandelvorm.
-            Cato is opgeleid als HBO psychomotorisch therapeut en werkt volgens
+            Ik ben opgeleid als HBO psychomotorisch therapeut en werk volgens
             de beroepsrichtlijnen. PMT kan vergoed worden vanuit de
             aanvullende zorgverzekering — informeer bij je verzekeraar naar de
             mogelijkheden.

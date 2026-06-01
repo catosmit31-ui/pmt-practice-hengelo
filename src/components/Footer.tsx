@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Instagram } from "lucide-react";
 import logoLight from "@/assets/logo-light.jpg";
+import vaktherapieLogo from "@/assets/vaktherapie-nederland.jpg.asset.json";
 
 const Footer = () => {
   return (
@@ -52,6 +53,25 @@ const Footer = () => {
         </div>
 
         <div className="mt-10 pt-6 border-t border-white/10 text-center">
+          <div className="flex flex-col items-center gap-3 mb-6">
+            <p className="text-xs uppercase tracking-widest opacity-70">
+              Aangesloten bij
+            </p>
+            <a
+              href="https://vaktherapie.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white rounded-md px-4 py-3 inline-block hover:opacity-90 transition-opacity"
+              aria-label="Vaktherapie Nederland — Federatie van Vaktherapeutische Beroepen"
+            >
+              <img
+                src={vaktherapieLogo.url}
+                alt="Vaktherapie Nederland — Federatie van Vaktherapeutische Beroepen"
+                className="h-14 w-auto object-contain"
+                loading="lazy"
+              />
+            </a>
+          </div>
           <p className="text-xs opacity-70">
             © {new Date().getFullYear()} Stap Vooruit PMT — Cato Pellewever, Psychomotorische Therapie. Praktijk bij{" "}
             <a href="https://teamfysio.nl/locaties/teamfysio-locatie-hengelo" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-100">
