@@ -3,8 +3,8 @@ import { ArrowRight, Activity, Smile, Shield, Wind, Footprints, Wallet, HeartPul
 import Layout from "@/components/Layout";
 
 const hulpvragen = [
-  { icon: Wind, title: "Stress + Burn-out", desc: "Leren ontspannen, grenzen herkennen en spanning loslaten via het lichaam." },
-  { icon: Shield, title: "Angst + Onzekerheid", desc: "Meer vertrouwen opbouwen in jezelf en je lichaam door ervaringsgericht oefenen." },
+  { icon: Wind, title: "Stress & Burn-out", desc: "Leren ontspannen, grenzen herkennen en spanning loslaten via het lichaam." },
+  { icon: Shield, title: "Angst & Onzekerheid", desc: "Meer vertrouwen opbouwen in jezelf en je lichaam door ervaringsgericht oefenen." },
   { icon: Smile, title: "Emotieregulatie", desc: "Leren omgaan met emoties via beweging en lichaamsbeleving." },
   { icon: Footprints, title: "Gedragsproblemen", desc: "Bij kinderen: werken aan zelfregulatie, concentratie en sociaal gedrag." },
 ];
@@ -273,7 +273,7 @@ const Behandelingen = () => {
                 </h3>
                 <ul className="space-y-2 text-sm">
                   <li className="flex justify-between gap-4">
-                    <span>Intake + opstellen behandelovereenkomst</span>
+                    <span>Intake & opstellen behandelovereenkomst</span>
                     <span className="font-medium text-foreground whitespace-nowrap">€ 100,00</span>
                   </li>
                   <li className="flex justify-between gap-4">
