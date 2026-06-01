@@ -1,19 +1,9 @@
 import { useState } from "react";
-import { Clock, Send } from "lucide-react";
+import { CalendarDays, Send } from "lucide-react";
 import Layout from "@/components/Layout";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
-
-const openingstijden = [
-  { dag: "Maandag", open: "08:00", sluit: "17:00" },
-  { dag: "Dinsdag", open: "08:00", sluit: "17:00" },
-  { dag: "Woensdag", open: "Gesloten", sluit: "" },
-  { dag: "Donderdag", open: "Gesloten", sluit: "" },
-  { dag: "Vrijdag", open: "Gesloten", sluit: "" },
-  { dag: "Zaterdag", open: "Gesloten", sluit: "" },
-  { dag: "Zondag", open: "Gesloten", sluit: "" },
-];
 
 const Contact = () => {
   const [form, setForm] = useState({ naam: "", email: "", telefoon: "", bericht: "" });
@@ -47,30 +37,26 @@ const Contact = () => {
           </div>
 
           <div className="max-w-2xl mx-auto">
-            {/* Openingstijden */}
+            {/* Praktijkdagen & bereikbaarheid */}
             <div className="bg-card rounded-xl border border-border p-8">
                 <div className="flex items-center gap-2 mb-6">
-                  <Clock className="text-primary" size={20} />
+                  <CalendarDays className="text-primary" size={20} />
                   <h3 className="font-heading text-xl font-semibold text-foreground">
-                    Openingstijden
+                    Praktijkdagen & bereikbaarheid
                   </h3>
                 </div>
-                <p className="text-muted-foreground text-sm mb-4">
-                  Behandelingen vinden plaats op maandag en dinsdag.
-                  In overleg zijn afspraken tot 19:00 uur mogelijk.
-                </p>
-                <div className="space-y-2">
-                  {openingstijden.map((item) => (
-                    <div
-                      key={item.dag}
-                      className="flex justify-between py-2 border-b border-border last:border-0"
-                    >
-                      <span className="text-sm text-foreground font-medium">{item.dag}</span>
-                      <span className="text-sm text-muted-foreground">
-                        {item.open === "Gesloten" ? "Gesloten" : `${item.open} – ${item.sluit}`}
-                      </span>
-                    </div>
-                  ))}
+                <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
+                  <p>
+                    Mijn praktijkdagen zijn op <span className="text-foreground font-medium">maandag en dinsdag</span>.
+                    Op deze dagen ben ik het beste bereikbaar voor zowel
+                    behandelingen als vragen.
+                  </p>
+                  <p>
+                    Heb je via het formulier, telefoon of e-mail contact
+                    opgenomen? Dan neem ik zo spoedig mogelijk — uiterlijk
+                    binnen enkele werkdagen — contact met je op om je vraag
+                    te bespreken of een afspraak in te plannen.
+                  </p>
                 </div>
             </div>
           </div>
