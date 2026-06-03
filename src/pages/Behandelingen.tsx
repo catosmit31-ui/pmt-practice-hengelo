@@ -47,12 +47,12 @@ const Behandelingen = () => {
                 Door te bewegen, te voelen en te ervaren werk je aan psychische,
                 emotionele en gedragsmatige klachten.
               </p>
-              <Link
-                to="#pmt"
+              <a
+                href="#pmt"
                 className="inline-flex items-center gap-2 text-primary font-medium text-sm hover:underline"
               >
                 Meer over PMT <ArrowRight size={16} />
-              </Link>
+              </a>
             </div>
 
             {/* Runningtherapie Card */}
@@ -67,12 +67,12 @@ const Behandelingen = () => {
                 Bewegen in de buitenlucht als middel voor psychische verwerking en
                 herstel. Samen werken aan doelen door middel van wandelen of hardlopen.
               </p>
-              <Link
-                to="#runningtherapie"
+              <a
+                href="#runningtherapie"
                 className="inline-flex items-center gap-2 text-primary font-medium text-sm hover:underline"
               >
                 Meer over runningtherapie <ArrowRight size={16} />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
