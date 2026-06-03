@@ -72,6 +72,24 @@ const Footer = () => {
               />
             </a>
           </div>
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-4 text-xs opacity-80">
+            <a
+              href="/documenten/Voorwaarden-behandeling.docx"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-100 underline-offset-2 hover:underline"
+            >
+              Voorwaarden behandeling
+            </a>
+            <a
+              href="/documenten/Privacyverklaring.docx"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-100 underline-offset-2 hover:underline"
+            >
+              Privacyverklaring
+            </a>
+          </div>
           <p className="text-xs opacity-70">
             © {new Date().getFullYear()} Stap Vooruit PMT — Cato Pellewever, Psychomotorische Therapie. Praktijk bij{" "}
             <a href="https://teamfysio.nl/locaties/teamfysio-locatie-hengelo" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-100">
