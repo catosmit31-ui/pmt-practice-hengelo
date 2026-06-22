@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, GraduationCap, Briefcase } from "lucide-react";
 import Layout from "@/components/Layout";
+import catoPortret from "@/assets/cato-portret.jpg.asset.json";
 
 const OverMij = () => {
   return (
@@ -8,7 +9,8 @@ const OverMij = () => {
       {/* Hero */}
       <section className="py-20 bg-card">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 items-start max-w-5xl">
+          <div>
             <p className="text-primary font-medium text-sm tracking-widest uppercase mb-4">
               Over Mij
             </p>
@@ -35,6 +37,15 @@ const OverMij = () => {
             >
               Neem contact op <ArrowRight size={16} />
             </Link>
+          </div>
+          <div className="lg:w-80 shrink-0">
+            <img
+              src={catoPortret.url}
+              alt="Portretfoto van Cato Pellewever"
+              className="w-full h-auto rounded-2xl shadow-xl object-cover"
+              loading="lazy"
+            />
+          </div>
           </div>
         </div>
       </section>

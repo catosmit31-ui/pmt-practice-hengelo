@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Activity, Smile, Shield, Wind, Footprints, Wallet, HeartPulse, Info, MessageCircleWarning, ExternalLink } from "lucide-react";
 import Layout from "@/components/Layout";
+import materialen from "@/assets/materialen.jpg.asset.json";
+import runningFoto from "@/assets/runningtherapie.jpg.asset.json";
 
 const hulpvragen = [
   { icon: Wind, title: "Stress & Burn-out", desc: "Leren ontspannen, grenzen herkennen en spanning loslaten via het lichaam." },
@@ -164,7 +166,14 @@ const Behandelingen = () => {
       {/* Runningtherapie detail */}
       <section id="runningtherapie" className="py-20">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <img
+              src={runningFoto.url}
+              alt="Runningtherapie in de buitenlucht"
+              className="w-full h-auto rounded-2xl shadow-lg object-cover"
+              loading="lazy"
+            />
+            <div>
             <h2 className="font-heading text-3xl font-semibold text-foreground mb-6">
               Runningtherapie
             </h2>
@@ -186,13 +195,18 @@ const Behandelingen = () => {
                 daarnaast behoefte hebben aan meer beweging in het dagelijks leven.
               </p>
             </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Hulpvragen */}
-      <section id="hulpvragen" className="py-20 bg-card">
-        <div className="container mx-auto px-6">
+      <section
+        id="hulpvragen"
+        className="relative py-20 bg-card bg-cover bg-center"
+        style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url(${materialen.url})` }}
+      >
+        <div className="container mx-auto px-6 relative">
           <div className="text-center mb-14">
             <h2 className="font-heading text-3xl font-semibold text-foreground mb-4">
               Hulpvragen — waarvoor kun je terecht?
