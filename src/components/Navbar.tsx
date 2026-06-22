@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logoDark from "@/assets/logo-dark.jpg";
+import logoDark from "@/assets/logo-donker.png.asset.json";
 
 const navItems = [
   { path: "/", label: "Home" },
@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-3 flex items-center justify-between">
         <Link to="/" aria-label="Stap Vooruit PMT — home" className="flex items-center">
           <img
-            src={logoDark}
+            src={logoDark.url}
             alt="Stap Vooruit PMT logo"
             className="h-12 md:h-14 w-auto object-contain"
           />
