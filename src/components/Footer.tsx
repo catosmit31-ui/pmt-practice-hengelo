@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Instagram } from "lucide-react";
-import logoLight from "@/assets/logo-light.jpg";
+import logoLight from "@/assets/logo-licht.png.asset.json";
 const vaktherapieLogoUrl = "/__l5e/assets-v1/77ce1617-d30d-445e-8a41-5af9f483ff59/vaktherapie-nederland.jpg";
 
 const Footer = () => {
@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <img
-              src={logoLight}
+              src={logoLight.url}
               alt="Stap Vooruit PMT logo"
               className="h-20 w-auto object-contain mb-3 -ml-2"
             />
