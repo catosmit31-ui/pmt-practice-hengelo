@@ -12,7 +12,7 @@ const Footer = () => {
             <img
               src={logoLight.url}
               alt="Stap Vooruit PMT logo"
-              className="h-20 w-auto object-contain mb-3 -ml-2"
+              className="h-24 w-auto object-contain mb-3 -ml-2"
             />
             <p className="text-sm leading-relaxed opacity-80">
               Praktijk voor psychomotorische therapie in Hengelo.
@@ -67,7 +67,7 @@ const Footer = () => {
               <img
                 src={vaktherapieLogoUrl}
                 alt="Vaktherapie Nederland — Federatie van Vaktherapeutische Beroepen"
-                className="h-14 w-auto object-contain"
+                className="h-16 w-auto object-contain"
                 loading="lazy"
               />
             </a>
