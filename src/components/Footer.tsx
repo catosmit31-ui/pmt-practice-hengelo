@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Instagram } from "lucide-react";
 import logoLight from "@/assets/logo-licht.png.asset.json";
-const vaktherapieLogoUrl = "/__l5e/assets-v1/77ce1617-d30d-445e-8a41-5af9f483ff59/vaktherapie-nederland.jpg";
+import vaktherapieLogo from "@/assets/vaktherapie-nederland.png.asset.json";
 
 const Footer = () => {
   return (
@@ -65,7 +65,7 @@ const Footer = () => {
               aria-label="Vaktherapie Nederland — Federatie van Vaktherapeutische Beroepen"
             >
               <img
-                src={vaktherapieLogoUrl}
+                src={vaktherapieLogo.url}
                 alt="Vaktherapie Nederland — Federatie van Vaktherapeutische Beroepen"
                 className="h-16 w-auto object-contain"
                 loading="lazy"
