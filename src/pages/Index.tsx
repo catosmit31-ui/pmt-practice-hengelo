@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
-import logoLight from "@/assets/logo-light.jpg";
+import catoPortret from "@/assets/cato-portret.jpg.asset.json";
 
 const HomePage = () => {
   return (
@@ -40,9 +40,9 @@ const HomePage = () => {
             </div>
             <div className="order-1 lg:order-2 flex justify-center animate-fade-in-up">
               <img
-                src={logoLight}
-                alt="Stap Vooruit PMT logo"
-                className="w-full max-w-md lg:max-w-xl h-auto object-contain rounded-2xl shadow-xl"
+                src={catoPortret.url}
+                alt="Cato Pellewever — psychomotorisch therapeut Hengelo"
+                className="w-full max-w-md lg:max-w-xl h-auto object-cover rounded-2xl shadow-xl"
               />
             </div>
           </div>
