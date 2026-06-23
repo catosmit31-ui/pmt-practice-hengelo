@@ -1,40 +1,32 @@
-## Logo integratie — "Stap Vooruit pmt"
+## Probleem
 
-Twee logoversies toevoegen aan de site en ze op de juiste achtergronden gebruiken zodat het contrast altijd klopt. Daarnaast wil ik de bestaande site-naam ("Cato Smit PMT") in de navigatie en footer vervangen door het beeldlogo, en de huidige (sand/sage) kleurpalette licht bijstellen zodat het naadloos aansluit bij de donkergroene tint uit het logo.
+De site staat live op `www.stapvooruitpmt.nl` (via de `CNAME` in de repo — GitHub Pages of vergelijkbare hosting). Alle afbeeldingen en logo's verwijzen momenteel naar Lovable's CDN (`/__l5e/assets-v1/...`). Die URL's werken alleen op Lovable-hosting, niet op je eigen domein — vandaar de vraagtekens/kapotte afbeeldingen op de live site.
 
-### Wat er gebeurt
+In `public/` staat momenteel alleen `fotos-PMTstapvooruit-2026-5.jpg`. De overige afbeeldingen en logo's moeten ook lokaal in `public/` komen te staan zodat ze meegebouwd en gepubliceerd worden.
 
-1. **Logo's importeren als assets**
-   - `user-uploads://Logo_Stapvooruit_Licht.jpg` → `src/assets/logo-light.jpg` (licht logo op donkergroene achtergrond — voor donkere secties/footer)
-   - `user-uploads://Logo_Stapvooruit_Donker.jpg` → `src/assets/logo-dark.jpg` (donker logo op witte achtergrond — voor de navbar en lichte secties)
+## Plan
 
-2. **Navbar** (`src/components/Navbar.tsx`)
-   - Tekst "Cato Smit PMT" vervangen door het **donkere logo** (de navbar-achtergrond is licht/cream).
-   - Hoogte ~40–48px, behoudt de link naar `/`.
-   - Praktijknaam "Stap Vooruit pmt" wordt zo ook visueel de merknaam van de praktijk.
+1. **Download de 7 bestanden van de Lovable CDN** en plaats ze in `public/images/` met duidelijke namen:
+   - `cato-portret.jpg` (portretfoto)
+   - `materialen.jpg` (materialen-achtergrond)
+   - `runningtherapie.jpg` (running)
+   - `logo-donker.png` (navbar-logo)
+   - `logo-licht.png` (footer-logo)
+   - `vaktherapie-nederland.png` (federatie-logo)
 
-3. **Footer** (`src/components/Footer.tsx`)
-   - Tekstkop "Cato Smit PMT" vervangen door het **lichte logo** in een donkergroen footer-blok (de footer-achtergrond wordt aangepast naar de donkergroene merkkleur — zie punt 5).
-   - Onderschrift "© Cato Smit — Psychomotorische Therapie. Praktijk bij TeamFysio Hengelo" blijft.
+2. **Code aanpassen** zodat afbeeldingen via een gewone string-pad worden geladen in plaats van via `.asset.json`-imports:
+   - `src/components/Navbar.tsx` → `src="/images/logo-donker.png"`
+   - `src/components/Footer.tsx` → `src="/images/logo-licht.png"` en `src="/images/vaktherapie-nederland.png"`
+   - `src/pages/Index.tsx` → `src="/images/cato-portret.jpg"`
+   - `src/pages/OverMij.tsx` → `src="/images/cato-portret.jpg"`
+   - `src/pages/Behandelingen.tsx` → `src="/images/materialen.jpg"` en `src="/images/runningtherapie.jpg"`
 
-4. **Homepage hero** (`src/pages/Index.tsx`)
-   - Subtiele extra: het lichte logo klein tonen boven de eyebrow-tekst, óf als watermark in de hoek. Houden we ingetogen — primair blijft de hero-foto + headline.
+3. **Bestaande foto hergebruiken?** In `public/` staat al `fotos-PMTstapvooruit-2026-5.jpg`. Wil je dat ik die ergens specifiek gebruik (bijv. als hero/over-mij), of laten staan en gewoon de portretfoto blijven gebruiken? Standaard: laat staan, niets veranderen aan deze.
 
-5. **Kleurpalette afstemmen op logo** (`src/index.css`)
-   - Nieuwe primaire merkkleur: het donkergroen uit het logo (~`hsl(170 20% 22%)`), met de bestaande sage als secundair accent.
-   - Footer + eventuele donkere secties krijgen deze nieuwe brand-dark als achtergrond, met de logo-cream als tekst.
-   - Body/cards blijven licht en rustig (huidige sand/cream tinten).
+4. **Opruimen:** de `.asset.json`-pointers in `src/assets/` worden niet meer gebruikt en kunnen verwijderd worden zodat alleen lokale paden overblijven.
 
-6. **Browser-tab branding**
-   - `index.html`: favicon en og:image vervangen door het donkere logo (op witte achtergrond werkt het op alle tabs).
-   - Site-titel update naar "Stap Vooruit pmt — Cato Smit | Psychomotorische Therapie Hengelo".
+5. **Build verifiëren** (`bun run build`) om te bevestigen dat alle imports nog kloppen.
 
-### Technische details
+## Resultaat
 
-- JPG-bestanden worden via `code--copy` naar `src/assets/` geplaatst en met ES6 imports gebruikt (`import logoLight from "@/assets/logo-light.jpg"`).
-- De JPG's hebben een achtergrondkleur ingebakken (donkergroen / wit) — dat is prima omdat ze op exact bijpassende secties geplaatst worden. Mocht je later een transparante PNG/SVG hebben, dan kunnen we die makkelijk inruilen.
-- Geen nieuwe dependencies nodig.
-
-### Open vraag
-
-De praktijk heet dus **"Stap Vooruit pmt"**? Op dit moment staat overal nog "Cato Smit PMT". Wil je dat ik **alle teksten** (navbar, footer-titel, meta-tags, hero, over-mij) aanpas naar "Stap Vooruit pmt" als praktijknaam (met Cato Smit als therapeut-naam op Over Mij), of moet "Cato Smit PMT" als merknaam blijven staan en het logo puur als beeldmerk fungeren? Ik ga er in de implementatie van uit dat **"Stap Vooruit pmt" de praktijknaam is** — laat het weten als dat anders moet.
+Na deze wijziging staan alle afbeeldingen in `public/images/` (in de repo, zichtbaar in GitHub) en worden ze geserveerd vanaf je eigen domein — dus ze werken zowel in de Lovable preview als op `stapvooruitpmt.nl`.
