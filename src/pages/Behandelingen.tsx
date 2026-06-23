@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Activity, Smile, Shield, Wind, Footprints, Wallet, HeartPulse, Info, MessageCircleWarning, ExternalLink } from "lucide-react";
 import Layout from "@/components/Layout";
-import materialen from "@/assets/materialen.jpg.asset.json";
-import runningFoto from "@/assets/runningtherapie.jpg.asset.json";
+const materialenUrl = "/images/materialen.jpg";
+const runningFotoUrl = "/images/runningtherapie.jpg";
 
 const hulpvragen = [
   { icon: Wind, title: "Stress & Burn-out", desc: "Leren ontspannen, grenzen herkennen en spanning loslaten via het lichaam." },
@@ -168,7 +168,7 @@ const Behandelingen = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <img
-              src={runningFoto.url}
+              src={runningFotoUrl}
               alt="Runningtherapie in de buitenlucht"
               className="w-full h-auto rounded-2xl shadow-lg object-cover"
               loading="lazy"
@@ -204,7 +204,7 @@ const Behandelingen = () => {
       <section
         id="hulpvragen"
         className="relative py-20 bg-card bg-cover bg-center"
-        style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url(${materialen.url})` }}
+        style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url(${materialenUrl})` }}
       >
         <div className="container mx-auto px-6 relative">
           <div className="text-center mb-14">
