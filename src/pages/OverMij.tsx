@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, GraduationCap, Briefcase } from "lucide-react";
 import Layout from "@/components/Layout";
-import catoPortret from "@/assets/cato-portret.jpg.asset.json";
+const catoPortretUrl = "/images/cato-portret.jpg";
 
 const OverMij = () => {
   return (
@@ -40,7 +40,7 @@ const OverMij = () => {
           </div>
           <div className="lg:w-80 shrink-0">
             <img
-              src={catoPortret.url}
+              src={catoPortretUrl}
               alt="Portretfoto van Cato Pellewever"
               className="w-full h-auto rounded-2xl shadow-xl object-cover"
               loading="lazy"
