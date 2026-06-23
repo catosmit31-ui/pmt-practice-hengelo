@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Instagram } from "lucide-react";
-import logoLight from "@/assets/logo-licht.png.asset.json";
-import vaktherapieLogo from "@/assets/vaktherapie-nederland.png.asset.json";
+const logoLightUrl = "/images/logo-licht.png";
+const vaktherapieLogoUrl = "/images/vaktherapie-nederland.png";
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <img
-              src={logoLight.url}
+              src={logoLightUrl}
               alt="Stap Vooruit PMT logo"
               className="h-24 w-auto object-contain mb-3 -ml-2"
             />
@@ -65,7 +65,7 @@ const Footer = () => {
               aria-label="Vaktherapie Nederland — Federatie van Vaktherapeutische Beroepen"
             >
               <img
-                src={vaktherapieLogo.url}
+                src={vaktherapieLogoUrl}
                 alt="Vaktherapie Nederland — Federatie van Vaktherapeutische Beroepen"
                 className="h-16 w-auto object-contain"
                 loading="lazy"

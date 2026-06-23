@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
-import catoPortret from "@/assets/cato-portret.jpg.asset.json";
+const catoPortretUrl = "/images/cato-portret.jpg";
 
 const HomePage = () => {
   return (
@@ -40,7 +40,7 @@ const HomePage = () => {
             </div>
             <div className="order-1 lg:order-2 flex justify-center animate-fade-in-up">
               <img
-                src={catoPortret.url}
+                src={catoPortretUrl}
                 alt="Cato Pellewever — psychomotorisch therapeut Hengelo"
                 className="w-full max-w-md lg:max-w-xl h-auto object-cover rounded-2xl shadow-xl"
               />
